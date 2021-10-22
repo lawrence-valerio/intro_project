@@ -4,4 +4,6 @@ class Game < ApplicationRecord
 
   has_many :game_publishers
   has_many :publishers, through: :game_publishers
+
+  validates :title, :description, :release_date, :platform, presence: true
 end
