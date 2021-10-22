@@ -1,7 +1,33 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+require 'net/http'
+require 'json'
+
+GameGenre.destroy_all
+GamePublisher.destroy_all
+Game.destroy_all
+Genre.destroy_all
+Publisher.destroy_all
+
+url = 'https://www.freetogame.com/api/games'
+uri = URI(url)
+response = Net::HTTP.get(uri)
+apiData = JSON.parse(response)
+
+apiData.each do |freeGame|
+  game = Game.create(
+    title: freeGame['title'],
+    description: freeGame['short_description'],
+    release_date: freeGame['release_date'],
+    platform: freeGame['platform']
+  )
+
+  genre = Genre.find_or_create_by(
+    genre_name: freeGame['genre']
+  )
+
+  publisher = Publisher.find_or_create_by(
+    publisher_name: freeGame['publisher']
+  )
+
+  GameGenre.create(game: game, genre: genre)
+  GamePublisher.create(game: game, publisher: publisher)
+end
