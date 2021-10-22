@@ -2,5 +2,5 @@ class Publisher < ApplicationRecord
   has_many :game_publishers
   has_many :games, through: :game_publishers
 
-  validates :publisher_name, presence: true
+  validates :publisher_name, presence: true, uniqueness: true
 end
