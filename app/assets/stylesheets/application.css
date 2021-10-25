@@ -13,3 +13,21 @@
  *= require_tree .
  *= require_self
  */
+
+.navbar{
+  -webkit-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
+  -moz-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
+       box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
+}
+
+.homepage{
+  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("https://static0.srcdn.com/wordpress/wp-content/uploads/2021/09/Why-AAA-Studios-Are-Focusing-On-Free-To-Play-Games-feature-pic.jpg");
+}
+
+.section{
+  background-color: black;
+}
+
+.about-page{
+  background-color: rgb(31, 31, 31);
+}

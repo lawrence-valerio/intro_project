@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
   def index
-    @games = Game.includes(:genres).all
+    @games = Game.includes(:game_genres).all
   end
 
   def show
