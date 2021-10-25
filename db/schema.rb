@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_22_175108) do
+ActiveRecord::Schema.define(version: 2021_10_25_210248) do
 
   create_table "game_genres", force: :cascade do |t|
     t.integer "game_id", null: false
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 2021_10_22_175108) do
     t.string "platform"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "thumbnail"
   end
 
   create_table "genres", force: :cascade do |t|
