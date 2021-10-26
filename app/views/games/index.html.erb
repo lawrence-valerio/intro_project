@@ -2,12 +2,23 @@
   <div class="hero-body">
     <div class="container is-widescreen">
       <div class="container has-text-centered">
-        <div class="notification is-black">
-          <p class="title pb-6">Games</p>
+        <div class="notification is-black px-6">
+          <p class="title pb-4 pt-2">Games</p>
           <div class="columns is-multiline is-mobile">
             <%@games.each do |game|%>
               <div class="column is-one-quarter">
-                <p><%=game.title%></p>
+                <div class="card">
+                  <div class="card-image">
+                    <figure class="image is-4by3">
+                      <img src=<%=game.thumbnail%> alt=<%=game.title%>>
+                    </figure>
+                  </div>
+                  <div class="card-content">
+                    <div class="content">
+                      <p><%=game.title%></p>
+                    </div>
+                  </div>
+                </div>
               </div>
             <%end%>
           </div>

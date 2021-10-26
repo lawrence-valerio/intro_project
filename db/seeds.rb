@@ -17,7 +17,8 @@ apiData.each do |freeGame|
     title: freeGame['title'],
     description: freeGame['short_description'],
     release_date: freeGame['release_date'],
-    platform: freeGame['platform']
+    platform: freeGame['platform'],
+    thumbnail: freeGame['thumbnail']
   )
 
   genre = Genre.find_or_create_by(
