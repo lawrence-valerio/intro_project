@@ -6,4 +6,6 @@ class Game < ApplicationRecord
   has_many :publishers, through: :game_publishers
 
   validates :title, :description, :release_date, :platform, presence: true
+
+  paginates_per 16
 end

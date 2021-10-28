@@ -1,17 +1,35 @@
 <section class="hero is-link is-fullheight-with-navbar">
   <div class="hero-body homepage">
     <div class="container is-max-desktop">
-      <div class="notification is-black">
-        <div class="field has-addons">
-          <div class="control is-expanded">
-            <input class="input" type="text" placeholder="Search for a game">
+      <div class="notification is-dark home-search-container">
+
+        <form action="/search">
+          <div class="columns home-column">
+            <div class="column is-narrow">
+              <div class="select">
+                <select name="f">
+                  <option value="All">All</option>
+                  <%@genres.each do |genre|%>
+                    <option value=<%=genre.genre_name%>><%= genre.genre_name %></option>
+                  <%end%>
+                </select>
+              </div>
+            </div>
+            <div class="column is-9">
+              <div class="field has-addons">
+              <div class="control is-expanded">
+                <input class="input" type="text" placeholder="Search for a game" name="q">
+              </div>
+              <div class="control">
+                <button class="button is-black" type="submit">
+                  Search
+                </button>
+              </div>
+            </div>
+            </div>
           </div>
-          <div class="control">
-            <a class="button is-dark">
-              Search
-            </a>
-          </div>
-        </div>
+        </form>
+
       </div>
     </div>
   </div>

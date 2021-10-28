@@ -1,2 +1,34 @@
-<h1>Publishers#index</h1>
-<p>Find me in app/views/publishers/index.html.erb</p>
+<p class="title pb-4 pt-6 has-text-centered page-title">Publishers</p>
+<div class="table-container">
+
+<div class="container is-widescreen">
+  <div class="container has-text-centered">
+  <div class="notification is-dark">
+    <div class="inner-table-container">
+        <table>
+        <thead>
+          <tr>
+            <th>Publisher</th>
+            <th>Number of games</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @publishers.each do |publisher| %>
+            <tr>
+              <td><%= publisher.publisher_name %></td>
+              <td><%= publisher.games.count %></td>
+              <td><%= link_to "View Games", publisher, class: 'button' %></td>
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="paginate-container my-4">
+      <%= paginate @publishers %>
+    </div>
+  </div>
+  </div>
+  </div>
+</div>

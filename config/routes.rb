@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   get 'publishers/index'
+  get 'search', to: 'games#search'
   root to: 'home#index'
   resources :games, only: %i[index show]
   resources :about

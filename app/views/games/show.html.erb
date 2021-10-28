@@ -1,2 +1,31 @@
-<h1>Games#show</h1>
-<p>Find me in app/views/games/show.html.erb</p>
+<section class="hero background is-fullheight-with-navbar game-details-container">
+  <div class="hero-body game-hero">
+    <div class="tile is-ancestor">
+      <div class="tile is-parent is-5">
+        <article class="tile is-child notification is-dark has-text-centered">
+          <figure class="image is-4by3">
+            <img src=<%=@game.thumbnail%>>
+          </figure>
+          <p class="title mt-4"><%= @game.title %></p>
+          <p class="subtitle my-3"><%= @game.description %></p>
+        </article>
+      </div>
+      <div class="tile is-parent">
+        <article class="tile is-child notification is-dark">
+          <div class="mx-5 my-5 detail-container">
+            <ul class="game-details-list">
+                <% @game.genres.each do |genre| %>
+                  <li class="mb-6"><strong>Genre:</strong> <%= link_to genre.genre_name, genre %></li>
+                <% end %>
+                <% @game.publishers.each do |publisher| %>
+                  <li class="mb-6"><strong>Publisher:</strong> <%= link_to publisher.publisher_name, publisher %></li>
+                <% end %>
+                <li class="mb-6"><strong>Release Date:</strong> <%= @game.release_date %></li>
+                <li class="mb-6"><strong>Platform:</strong> <%= @game.platform %></li>
+            </ul>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>

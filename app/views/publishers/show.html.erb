@@ -2,14 +2,15 @@
   <div class="hero-body">
     <div class="container is-widescreen">
       <div class="container has-text-centered">
-        <p class="title pb-4  page-title" >Games</p>
-        <div class="notification is-dark px-6 pt-6">
+        <p class="title pb-4  page-title" ><%= @publisher.publisher_name %> games</p>
+        <div class="notification is-dark px-6 pt-6 pb-6">
           <div class="columns is-multiline is-mobile">
-            <%@games.each do |game|%>
+            <%@publisher.games.each do |game|%>
               <div class="column is-one-quarter">
                 <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
+                      <img src=<%=game.thumbnail%> alt=<%=game.title%>>
                        <%= link_to image_tag(game.thumbnail, :alt => game.title), game %>
                     </figure>
                   </div>
@@ -21,9 +22,6 @@
                 </div>
               </div>
             <%end%>
-            <div class="paginate-container my-4">
-              <%= paginate @games %>
-            </div>
           </div>
         </div>
       </div>
