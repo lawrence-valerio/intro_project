@@ -13,7 +13,7 @@
   </head>
 
   <body>
-    <%=render partial: 'common/menu'%>
+    <%=render partial: 'common/menu', locals: {genre_variable: @genres} %>
 
     <%= yield %>
   </body>

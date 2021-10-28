@@ -14,102 +14,117 @@
  *= require_self
  */
 
-.navbar{
-  -webkit-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
-  -moz-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
-  box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
+    -moz-box-shadow: 0 8px 6px -6px rgb(15, 15, 15);
+    box-shadow: 0 8px 6px -6px rgb(0, 0, 0);
+    background-color: #272727 !important;
 }
 
-.homepage{
-  background: linear-gradient( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) ),url("https://static0.srcdn.com/wordpress/wp-content/uploads/2021/09/Why-AAA-Studios-Are-Focusing-On-Free-To-Play-Games-feature-pic.jpg");
+.notification {
+    background-color: #272727 !important;
 }
 
-.section{
-  background-color: black;
+.homepage {
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.7)), url("https://static0.srcdn.com/wordpress/wp-content/uploads/2021/09/Why-AAA-Studios-Are-Focusing-On-Free-To-Play-Games-feature-pic.jpg");
 }
 
-.about-page{
-  background-color: rgb(31, 31, 31);
+.section {
+    background-color: black;
 }
 
-.card{
-  background-color: black;
+.about-page {
+    background-color: rgb(31, 31, 31);
 }
 
-.paginate-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.card {
+    background-color: black;
 }
 
-.inner-table-container{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
+.paginate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.background{
-  background-color: #121212;
+.inner-table-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.game-details-list{
-  list-style-type: none;
-  font-size: 25px;
+.background {
+    background-color: #121212;
 }
 
-.detail-container{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  height: 100%;
+.game-details-list {
+    list-style-type: none;
+    font-size: 25px;
 }
 
-.game-hero{
-  width: 75%;
+.detail-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 100%;
 }
 
-.game-details-container{
-  justify-content: center !important;
-  align-items: center !important;
+.game-hero {
+    width: 75%;
 }
 
-.home-column{
-  justify-content: center !important;
+.game-details-container {
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.home-column {
+    justify-content: center !important;
 }
 
 html {
-  background-color: #121212 !important;
+    background-color: #121212 !important;
 }
 
-.table-container{
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+.table-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.page-title{
-  color: white !important;
+.page-title {
+    color: white !important;
 }
 
-tr{
-  color: black !important;
+tr {
+    color: black !important;
 }
 
-table{
-  width: 90%;
-  margin-top: 20px;
-  margin-bottom: 20px;
+table {
+    width: 90%;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-th{
-  height: 60px;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+th {
+    height: 60px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
+.about-hero {
+    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://www.ontomywardrobe.com/wp-content/uploads/2021/01/best-free-games-on-steam.jpg");
+    box-shadow: inset 0px -1px 10px -10px rgb(0, 0, 0);
+    color: white;
+}
 
+.about-text {
+    color: white;
+    font-size: 20px;
+    margin-top: 5%;
+}

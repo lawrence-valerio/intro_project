@@ -2,12 +2,46 @@
   <div class="container">
     <div id="navMenu" class="navbar-menu">
       <div class="navbar-start">
-        <%= link_to 'Home', root_path, :class => "navbar-item" %>
-        <%= link_to 'Games', games_path, :class => "navbar-item" %>
-        <%= link_to 'Genres', genres_path, :class => "navbar-item" %>
-        <%= link_to 'Publishers', publishers_path, :class => "navbar-item" %>
-        <%= link_to 'About', about_index_path, :class => "navbar-item" %>
+        <%= link_to 'Home', root_path, :class => "navbar-item has-text-weight-semibold" %>
+        <%= link_to 'Games', games_path, :class => "navbar-item has-text-weight-semibold" %>
+        <%= link_to 'Genres', genres_path, :class => "navbar-item has-text-weight-semibold" %>
+        <%= link_to 'Publishers', publishers_path, :class => "navbar-item has-text-weight-semibold" %>
+        <%= link_to 'About', about_index_path, :class => "navbar-item has-text-weight-semibold" %>
       </div>
     </div>
+
+    <%if controller_name != 'home'%>
+      <div class="navbar-end">
+        <div class="navbar-item">
+          <form action="/search">
+            <div class="columns home-column">
+              <div class="column is-narrow">
+                <div class="select">
+                  <select name="f">
+                    <option value="All">All</option>
+                    <%@global_genres.each do |genre|%>
+                      <option value=<%=genre.genre_name%>><%= genre.genre_name %></option>
+                    <%end%>
+                  </select>
+                </div>
+              </div>
+              <div class="column is-9">
+                <div class="field has-addons">
+                <div class="control is-expanded">
+                  <input class="input" type="text" placeholder="Search for a game" name="q">
+                </div>
+                <div class="control">
+                  <button class="button is-black" type="submit">
+                    Search
+                  </button>
+                </div>
+              </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    <%end%>
+
   </div>
 </nav>
