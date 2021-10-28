@@ -2,18 +2,18 @@
   <div class="hero-body game-hero">
     <div class="tile is-ancestor">
       <div class="tile is-parent is-5">
-        <article class="tile is-child notification is-dark has-text-centered">
+        <article class="tile is-child notification is-dark is-centered image-detail">
           <figure class="image is-4by3">
             <img src=<%=@game.thumbnail%>>
           </figure>
-          <p class="title mt-4"><%= @game.title %></p>
-          <p class="subtitle my-3"><%= @game.description %></p>
         </article>
       </div>
       <div class="tile is-parent">
         <article class="tile is-child notification is-dark">
           <div class="mx-5 my-5 detail-container">
             <ul class="game-details-list">
+                <li class="mb-6"><strong>Title:</strong> <%= @game.title %></li>
+                <li class="mb-6"><strong>Description:</strong> <%= @game.description %></li>
                 <% @game.genres.each do |genre| %>
                   <li class="mb-6"><strong>Genre:</strong> <%= link_to genre.genre_name, genre %></li>
                 <% end %>

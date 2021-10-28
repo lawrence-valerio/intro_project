@@ -63,7 +63,7 @@
 
 .game-details-list {
     list-style-type: none;
-    font-size: 25px;
+    font-size: 15px;
 }
 
 .detail-container {
@@ -118,7 +118,7 @@ th {
 }
 
 .about-hero {
-    background: linear-gradient( rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url("https://www.ontomywardrobe.com/wp-content/uploads/2021/01/best-free-games-on-steam.jpg");
+    background: linear-gradient( rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://www.ontomywardrobe.com/wp-content/uploads/2021/01/best-free-games-on-steam.jpg");
     box-shadow: inset 0px -1px 10px -10px rgb(0, 0, 0);
     color: white;
 }
@@ -127,4 +127,26 @@ th {
     color: white;
     font-size: 20px;
     margin-top: 5%;
+}
+
+.search-button {
+    background-color: #121212 !important;
+    transition: 0.4s;
+}
+
+.search-button:hover {
+    background-color: #0c0c0c !important;
+}
+
+.image-detail {
+    display: flex;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-result-error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

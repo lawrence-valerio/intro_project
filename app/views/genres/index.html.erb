@@ -1,27 +1,30 @@
 <p class="title pb-4 pt-6 has-text-centered page-title">Genres</p>
 <div class="table-container">
+
+<div class="container is-widescreen">
   <div class="container has-text-centered">
-    <div class="notification is-dark">
-      <div class="inner-table-container">
+  <div class="notification is-dark">
+    <div class="inner-table-container">
         <table>
-          <thead>
+        <thead>
+          <tr>
+            <th class="text-left">Genre</th>
+            <th class="text-left">Number of games</th>
+            <th class="text-left"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @genres.each do |genre| %>
             <tr>
-              <th>Genre</th>
-              <th>Number of games</th>
-              <th></th>
+              <td><%= genre.genre_name %></td>
+              <td><%= genre.games.count %></td>
+              <td><%= link_to "View Games", genre, class: 'button table-button' %></td>
             </tr>
-          </thead>
-          <tbody>
-            <% @genres.each do |genre| %>
-              <tr>
-                <td><%= genre.genre_name %></td>
-                <td><%= genre.games.count %></td>
-                <td><%= link_to "View Games", genre, class: 'button' %></td>
-              </tr>
-            <%end%>
-          </tbody>
-        </table>
-      </div>
+          <%end%>
+        </tbody>
+      </table>
     </div>
+  </div>
+  </div>
   </div>
 </div>

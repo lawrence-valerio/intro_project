@@ -11,7 +11,7 @@
                   <div class="card-image">
                     <figure class="image is-4by3">
                       <img src=<%=game.thumbnail%> alt=<%=game.title%>>
-                       <%= link_to image_tag(game.thumbnail, :alt => game.title), game %>
+                       <%= link_to image_tag(game.thumbnail, :alt => game.title), game, :class => "game-image" %>
                     </figure>
                   </div>
                   <div class="card-content">

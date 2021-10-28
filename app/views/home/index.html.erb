@@ -10,7 +10,7 @@
                 <select name="f">
                   <option value="All">All</option>
                   <%@genres.each do |genre|%>
-                    <option value=<%=genre.genre_name%>><%= genre.genre_name %></option>
+                    <option value="<%=genre.genre_name%>"><%= genre.genre_name %></option>
                   <%end%>
                 </select>
               </div>
@@ -21,7 +21,7 @@
                 <input class="input" type="text" placeholder="Search for a game" name="q">
               </div>
               <div class="control">
-                <button class="button is-black" type="submit">
+                <button class="button is-black search-button" type="submit">
                   Search
                 </button>
               </div>

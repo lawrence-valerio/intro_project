@@ -8,13 +8,16 @@
           <p class="title pb-4  page-title" >Search results for "<%= params[:q] %>"</p>
         <%end%>
         <div class="notification is-dark px-6 pt-6 pb-6">
-          <div class="columns is-multiline is-mobile">
+          <div class="columns is-multiline is-mobile search-result-error">
+          <%if @games.count == 0%>
+            <p class="is-size-4">Sorry, there are 0 results for this search.</p>
+          <%else%>
             <%@games.each do |game|%>
               <div class="column is-one-quarter">
                 <div class="card">
                   <div class="card-image">
                     <figure class="image is-4by3">
-                       <%= link_to image_tag(game.thumbnail, :alt => game.title), game %>
+                       <%= link_to image_tag(game.thumbnail, :alt => game.title), game, :class => "game-image" %>
                     </figure>
                   </div>
                   <div class="card-content">
@@ -25,6 +28,7 @@
                 </div>
               </div>
             <%end%>
+          <%end%>
             <div class="paginate-container my-4">
               <%= paginate @games %>
             </div>
